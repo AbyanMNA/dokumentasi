@@ -20,7 +20,7 @@ jobs:
       - name: "Instalasi Python"
         uses: actions/setup-python@v5
         with:
-          python-version: 3x
+          python-version: 3.x
       - name: "Memasang depensi: mkdocs-material, mkdocs-static-i18n, mkdocs[i18n]"
         run: "pip install mkdocs-material mkdocs-static-i18n mkdocs[i18n]"
       - name: "Cache???"
