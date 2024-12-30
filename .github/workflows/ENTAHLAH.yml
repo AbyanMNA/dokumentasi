@@ -26,7 +26,7 @@ jobs:
       - name: "Cache???"
         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - name: Pemasangan Pages
-        uses: action/configure-pages@v5
+        uses: actions/configure-pages@v5
       - name: "Menjalankan pembangunan"
         run: mkdocs build
       # - name: Unggah artefak
