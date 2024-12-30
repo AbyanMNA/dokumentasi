@@ -1,6 +1,6 @@
 site_name: "Dokumentasi Abyan, M. N. A."
 site_author: AbyanMNA
-copyright: Oleh Github/AbyanMNA. Sebagian sumber asli ada hak cipta maupun lisensi CC-BY<br/>Tema MkDocs Material oleh Github/Squidfunk
+copyright: Oleh Github/AbyanMNA. Sebagian sumber asli ada hak cipta maupun lisensi CC-BY<br/>Sebagian modul MkDocs Material oleh Github/Squidfunk
 use_directory_urls: true
 theme:
   name: material
