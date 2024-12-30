@@ -30,16 +30,16 @@ jobs:
       - name: "Menjalankan pembangunan"
         run: mkdocs build
       - name: Unggah artefak
-       uses: actions/upload-pages-artifact@v3
-       with:
-         path: 'site/'
- deploy:
-   needs: build
-   environment:
-     name: github-pages
-     url: ${{ steps.deployment.outputs.page_url }}
-   runs-on: ubuntu-latest
-   steps:
-     - name: Sebarkan hasil ke Github Pages
-       id: deployment
-       uses: actions/deploy-pages@v4
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'site/'
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sebarkan hasil ke Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
