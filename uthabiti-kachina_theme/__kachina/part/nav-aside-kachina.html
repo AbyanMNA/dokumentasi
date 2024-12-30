@@ -1,0 +1,14 @@
+{% if not nav_item.children %}
+<li {% if nav_item.active %}class="kachina_navactive"{% endif %} style="list-style-image: url('{{ '/__kachina/img/icon/list/list-style-file.png' | url }}');">
+    <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+</li>
+{% else %}
+  <li style="list-style-image: url('{{ '/__kachina/img/icon/list/list-style-book.png' | url }}');">
+    {{ nav_item.title }}
+    <ul>
+        {% for nav_item in nav_item.children %}
+            {% include "/__kachina/part/nav-aside-kachina.html" %}
+        {% endfor %}
+    </ul>
+  </li>
+{% endif %}

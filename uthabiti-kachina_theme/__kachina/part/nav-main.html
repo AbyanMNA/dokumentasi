@@ -1,0 +1,19 @@
+<div id="NavbarTop" name="bar navigasi" class="mn-lr-1600px backcolor">
+  <ul class="navbar" id="NavbarTopMenu">
+    <li class="flleft title"><a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"><img src="{{ '/__kachina/img/icon/dfolder.png' | url }}" alt="{{ config.site_name, 'Logo' | e }}" title="{{ config.site_name, 'Logo' | e }}" class="nav-logo"/></a></li>
+    <li class="flleft title"><a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}">{{ config.site_name }}</a></li>
+    <li class="iconedmenu"><a href="javascript:navbarTop1();"><i class="fa fa-bars"></i></a></li>{% if config.extra.alternate %}
+    <li class="dropnavt">
+      <button class="dropnavtbtn" type="button"><i class="fa fa-language"></i> Language <i class="fa fa-caret-down"></i></button>
+      <ul class="dropnavt-content">{% for alt in config.extra.alternate %}
+        <li><a href="{{ alt.link | url }}" hreflang="{{ alt.lang }}">{{ alt.name }}</a></li>{% endfor %}
+      </ul>
+    </li>{% endif %}
+    <li class="dropnavt">
+      <button class="dropnavtbtn" type="button">Main Menu <i class="fa fa-caret-down"></i></button>
+      <ul class="dropnavt-content">{% import '__kachina/part/nav-main-menu.html' as item with context %}{% for nav_item in nav %}
+        {{ item.render(nav_item) }}{% endfor %}
+      </ul>
+    </li>
+  </ul>
+</div>

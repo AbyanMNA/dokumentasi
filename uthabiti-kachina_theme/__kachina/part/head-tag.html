@@ -1,0 +1,17 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes"/>
+  <meta name="description" content="{{ page.description or '' }}"/>
+  <meta name="author" content="{{ page.author or config.site_author or '' }}"/>
+  <meta name="og:site_name" content="{{ config.site_name or '' }}"/>
+  <meta name="og:description" content="{{ page.description or '' }}"/>
+  <meta name="og:title" content="{{ page.title }}"/>
+  <link rel="preload" as="style" href="{{ '/__kachina/css/css.css' | url }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ '/__kachina/css/css.css' | url }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ '/__kachina/css/all.css' | url }}"/>{% for path in config.extra_css %}
+  <link href="{{ path|url }}" rel="stylesheet">{% endfor %}
+  <script src="{{ '/__kachina/scr/this.js' | url }}"></script>{% block extrahead %}
+  {% endblock %}
+</head>

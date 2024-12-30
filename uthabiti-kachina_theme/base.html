@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{% if config.plugins.i18n %}{{ i18n_page_locale }}{% elif config.theme.language %}{{ config.theme.language }}{% else %}xx{% endif %}">
+  {% include '__kachina/part/head-tag.html' %}
+  <body>
+    {% include '__kachina/part/nav-main.html' %}
+    <div class="mn-lr-1600px pd-20px">
+      <aside class="kachina">
+        <p style="width: 100%;" class="kachina_only-mobile">
+          <a href="javascript:asideKachina1();" class="pd-8px small-fnt" style="display: block; background-color: #D6AD33; color: black; width: 100%; font-weight: bold; text-decoration: none;">
+            &#x1F782; Show/hide navigation menu
+          </a>
+        </p>
+        <ul style="padding: 8px;" class="small-fnt sidebarnav-menu kachina_hide-default" id="AsideKachina">{% for nav_item in nav %}
+          {% include '/__kachina/part/nav-aside-kachina.html' %}{% endfor %}
+        </ul>
+      </aside>
+      <main id="MainContent" class="kachina">{% block content %}
+        {{ page.content }}{% endblock %}
+      </main>
+    </div>
+  </body>
+</html>

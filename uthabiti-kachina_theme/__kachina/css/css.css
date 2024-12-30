@@ -1,0 +1,495 @@
+/* Import font file */
+@font-face {
+    font-family: 'ALT Rin Mikaru Khadijah';
+    src: url('../font/RINMIKARU.eot');
+    src: url('../font/RINMIKARU.eot?#iefix') format('embedded-opentype'),
+        url('../font/RINMIKARU.woff2') format('woff2'),
+        url('../font/RINMIKARU.woff') format('woff'),
+        url('../font/RINMIKARU.svg#ALT_RINMIKARU-Regular') format('svg');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+
+/* CSS3 Variables */
+:root {
+  --fvh: 100vh;
+  --fvw: 100vw;
+  --fc: 100%;
+  --fpx: 100px;
+  /* Color scheme */
+  --ScreenOff: black;
+  --Paper: white;
+  --Shield: grey;
+  /* Font scheme */
+  --WinLNXMac: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  --HonkaiStarRail: 'ALT Rin Mikaru Khadijah', Bahnschrift, 'DIN Alternate', 'DIN 1451 Mittelschrift', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --Windows2000ME: Tahoma, "Verdana Pro", "Verdana Ref", Verdana, "MS Shell Dlg 2", "Bitstream Vera Sans", "DejaVu Sans", sans-serif;
+  --GenshinImpact: "Genshin Impact", "Shen Serif NC", ShinShin, HYWenHei, HYWenHei-85W, SDK_SC_Web, "SDK_SC_Web 85W", "SDK_SC_Web Heavy", "SDK SC Web", "HY WenHei 85W", serif;
+  --Arabic: "Geeza Pro", "Times New Roman", "Cairo", "Droid Arabic Kufi", serif;
+  --SerifFallback: "Times New Roman", Times, Georgia, Garamond, "PT Sans", "DejaVu Serif", serif;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*img,*/ picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* End CSS Reset */
+
+/* HTML */
+body {font-family: var(--WinLNXMac);}
+h1,h2,h3,h4,h5,h6,h7,h8 {
+  /* font-family: Arial, "Liberation Sans", Helvetica, sans-serif; */
+  font-family: var(--HonkaiStarRail);
+  font-weight: normal;
+}
+a { color: #5E530A; } a:visited { color: #5E530A; }
+a:focus { color: #D6AD33; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  padding: 8pt;
+  font-family: inherit;
+  font-size: inherit;
+  background: unset;
+  background-color: unset;
+  border: 2.5pt solid #D6AD33;
+}
+
+/* Padding settings */
+.pd-8px {padding: 8px;}
+.pd-12px {padding: 12px;}
+.pd-16px {padding: 16px;}
+.pd-20px {padding: 20px;}
+.pd-24px {padding: 24px;}
+.pd-28px {padding: 28px;}
+.pd-32px {padding: 32px;}
+
+/* Margin settings */
+.mn-8px {margin: 8px;}
+.mn-12px {margin: 12px;}
+
+/* Auto LR margin with max-width */
+.mn-lr-900px {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+.mn-lr-1024px {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+.mn-lr-1280px {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+.mn-lr-1600px {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+}
+
+/* Navbar */
+#NavbarTop.backcolor {
+  background-color: white;
+}
+ul.navbar {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+} ul.navbar > li {display: inline; float: right} ul.navbar > li.flleft { float: left; }
+ul.navbar > li > a {
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+} ul.navbar > li.title > a:hover {
+  color: #D6AD33;
+  background-color: white;
+} ul.navbar > li > a:hover, .dropnavt:hover .dropnavtbtn {
+  color: #2E2B05;
+  background-color: #FFF11B;
+} ul.navbar li.iconedmenu {
+  display: none;
+}
+.dropnavt {
+  overflow: hidden;
+} .dropnavt .dropnavtbtn {
+  border: none;
+  outline: none;
+  color: #5E530A;
+  padding: 14px 20px;
+  background-color: white;
+  font-family: inherit;
+  margin: 0;
+} .dropnavt-content {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+} .dropnavt-content a {
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #5E530A;
+} .dropnavt-content a:hover {
+  color: #2E2B05;
+  background-color: #FFF11B;
+} .dropnavt:hover .dropnavt-content {
+  display: block;
+}
+
+/* Customize */
+.background-set {
+  background-image: url("/__set/img/back/__T-and-O.jpg");
+  background-image: url("/__set/img/back/20240729183241.png");
+  background-size: cover;
+  background-position: top left;
+  min-height: 100%;
+  min-height: 100vh;
+}
+.nav-logo {
+  vertical-align: text-bottom;
+  margin-top: -3px;
+  margin-bottom: 0px;
+  width: 16pt;
+  height: auto;
+}
+.fixed-btl {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  max-width: 400px;
+  padding: 4px 8px;
+  background: white;
+}
+
+.hideshow-aside {
+  display: none;
+}
+
+#MainContent p {
+  margin-block-start: 0.88em;
+  margin-block-end: 0.88em;
+}
+.small-fnt {
+  font-size: 9pt;
+}
+
+#SourceBackImage {
+  z-index: -1
+}
+
+.admonition {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.admonition-title {
+  padding-top: 8px;
+  font-weight: bold;
+}
+.admonition p {
+  font-size: 9pt;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-block-start: unset !important;
+  margin-block-end: unset !important;
+}
+.admonition.note, .admonition.info {
+  border: 0.075rem solid #2195f3af;
+}
+.admonition.note > .admonition-title, .admonition.info > .admonition-title {
+  background-color: #2195f3af;
+  color: white;
+}
+.admonition.warning {
+  border: 0.075rem solid #ff9800;
+}
+.admonition.warning > .admonition-title {
+  background-color: #ff9800;
+  color: white;
+}
+.admonition.danger, .admonition.caution, .admonition.dead {
+  border: 0.075rem solid #f44336;
+}
+.admonition.danger > .admonition-title, .admonition.caution > .admonition-title, .admonition.dead > .admonition-title {
+  background-color: #f44336;
+  color: white;
+}
+.admonition.tip {
+  border: 0.075rem solid #04AA6D;
+}
+.admonition.tip > .admonition-title {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Aside and Main in Uthabiti Kachina Squad Composition */
+aside.kachina {
+  width: 275px;
+  height: auto;
+  min-height: 500px;
+  display: block;
+  position: absolute;
+  padding: 4px;
+  overflow: auto;
+  white-space: nowrap;
+}
+/* aside.kachina ul {
+  padding-inline-start: 0px;
+}
+aside.kachina li {
+  list-style-type: none;
+}*/
+aside.kachina > ul > li {
+  margin-left: 16px;
+}
+aside.kachina li > ul {
+  padding-inline-start: 22px;
+}
+
+.kachina_only-mobile {
+  display: none;
+}
+.kachina_navactive > a {
+  background-color: #FFF11B;
+  text-decoration: none;
+  color: #111;
+}
+.kachina_hide {
+  display: none;
+  height: 0px;
+}
+main.kachina {
+  margin-left: 325px;
+}
+
+/* Dark but contrast? */
+html[data-tscheme="dark"] {
+  color: antiquewhite;
+  background-color: #333;
+}
+html[data-tscheme="dark"] a { color: #FFE870; } html[data-tscheme="dark"] a:visited { color: #FFE870; }
+html[data-tscheme="dark"] a:focus { color: #FFFCC2; }
+
+/* Additional: MkDocs Material CSS by Github/squidfunk */
+.emojione, .twemoji, .gemoji {
+  display: inline-flex;
+  height: 1.125em;
+  vertical-align: text-bottom;
+}
+.emojione svg, .gemoji svg, .twemoji svg {
+  fill: currentcolor;
+  max-height: 100%;
+  width: 1.125em;
+}
+.grid-dokumenu {
+  grid-gap: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  margin: 1em 0;
+}
+.grid-dokumenu.cards > ol,
+.grid-dokumenu.cards > ul {
+  display: contents;
+}
+.grid-dokumenu.cards > ol > li,
+.grid-dokumenu.cards > ul > li,
+.grid-dokumenu > .card {
+ border: 0.05rem solid var(--md-default-fg-color--lightest);
+ border-radius: 0.1rem;
+ display: block;
+ margin: 0;
+ padding: 0.8rem;
+ transition: border 0.25s, box-shadow 0.25s;
+}
+.grid-dokumenu.cards > ol > li:focus-within,
+.grid-dokumenu.cards > ol > li:hover,
+.grid-dokumenu.cards > ul > li:focus-within,
+.grid-dokumenu.cards > ul > li:hover,
+.grid-dokumenu > .card:focus-within,
+.grid-dokumenu > .card:hover {
+ border-color: #0000;
+ box-shadow: var(--md-shadow-z2);
+}
+.grid-dokumenu.cards > ol > li > hr,
+.grid-dokumenu.cards > ul > li > hr,
+.grid-dokumenu > .card > hr {
+ margin-bottom: 1em;
+ margin-top: 1em;
+}
+.grid-dokumenu.cards > ol > li > :first-child,
+.grid-dokumenu.cards > ul > li > :first-child,
+.grid-dokumenu > .card > :first-child {
+ margin-top: 0;
+}
+.grid-dokumenu.cards > ol > li > :last-child,
+.grid-dokumenu.cards > ul > li > :last-child,
+.grid-dokumenu > .card > :last-child {
+ margin-bottom: 0;
+}
+.grid-dokumenu > *,
+.grid-dokumenu > .admonition,
+.grid-dokumenu > .highlight > *,
+.grid-dokumenu > .highlighttable,
+.grid-dokumenu >  details,
+.grid-dokumenu > details,
+.grid-dokumenu > pre {
+ margin-bottom: 0;
+ margin-top: 0;
+}
+.grid-dokumenu > .highlight > pre:only-child,
+.grid-dokumenu > .highlight > pre > code,
+.grid-dokumenu > .highlighttable,
+.grid-dokumenu > .highlighttable > tbody,
+.grid-dokumenu > .highlighttable > tbody > tr,
+.grid-dokumenu > .highlighttable > tbody > tr > .code,
+.grid-dokumenu > .highlighttable > tbody > tr > .code > .highlight,
+.grid-dokumenu > .highlighttable > tbody > tr > .code > .highlight > pre,
+
+ .grid-dokumenu
+ > .highlighttable
+ > tbody
+ > tr
+ > .code
+ > .highlight
+ > pre
+ > code {
+ height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    color: antiquewhite;
+    background-color: #333;
+  }
+  a { color: #FFE870; } a:visited { color: #FFE870; }
+  a:focus { color: #FFFCC2; }
+  
+  #NavbarTop.backcolor {
+    background-color: #333;
+  }
+  ul.navbar > li.title > a:hover {
+    color: aquamarine;
+    background-color: #333;
+  } ul.navbar > li > a:hover, .dropnavt:hover .dropnavtbtn {
+    color: #111;
+    background-color: #FFFCC2;
+  }
+  .dropnavt .dropnavtbtn {
+    background-color: #333;
+    color: #FFE870;
+  }
+
+  .fixed-btl {
+    background-color: #333;
+  }
+}
+
+/* Responsive? Just Viewport */
+@media screen and (max-width: 600px) {
+  ul.navbar li:not(:first-child), .dropnavt .dropnavtbtn {display: none;}
+  ul.navbar li.iconedmenu {
+    float: right;
+    display: block;
+  }
+  ul.navbar.responsive {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: white;
+  }
+  ul.navbar.responsive .iconedmenu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.navbar.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  ul.navbar.responsive li a {
+    text-align: left;
+  }
+  ul.navbar.responsive .dropnavt { float: none; }
+  ul.navbar.responsive .dropnavt-content { position: relative; }
+  ul.navbar.responsive .dropnavt .dropnavtbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  } 
+}
+
+@media screen and (max-width: 799px) {
+  /* Aside and Main in Uthabiti Kachina Squad Composition */
+  aside.kachina {
+    width: auto;
+    min-height: unset;
+    position: inherit;
+    padding: 4px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .kachina_only-mobile {
+    display: inline;
+  }
+  .kachina_hide-default {
+    display: none;
+    height: 0px;
+  }
+  
+
+  main.kachina {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) and (prefers-color-scheme: dark) {
+  ul.navbar.responsive {
+    background-color: #333;
+  }
+}

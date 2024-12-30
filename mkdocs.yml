@@ -1,0 +1,68 @@
+site_name: "Dokumentasi Abyan, M. N. A."
+site_author: AbyanMNA
+copyright: Oleh Github/AbyanMNA. Sebagian sumber asli ada hak cipta maupun lisensi CC-BY<br/>Tema MkDocs Material oleh Github/Squidfunk
+use_directory_urls: true
+theme:
+  name: material
+  custom_dir: uthabiti-kachina_theme/
+  language: id
+  font: false
+  favicon: __kachina/img/icon/doku-favicon.png
+  logo: __kachina/img/icon/dfolder.png
+
+extra:
+  generator: false
+  alternate:
+   - name: Indonesia
+     link: /
+     lang: id
+   - name: English
+     link: /en/
+     lang: en
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.mark
+  - pymdownx.superfences
+  - toc:
+      permalink: false
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+plugins:
+  # - awesome-pages
+  - i18n:
+      default_language: id
+      languages:
+        - locale: id
+          default: true
+          build: true
+          name: Bahasa Indonesia
+          nav_translations:
+            DVNM: Dunia Virtual dan Nyata Menyatu
+            IA AI: IA dan AI
+        - locale: en
+          default: false
+          build: true
+          name: English
+          site_name: "Abyan, M. N. A. Documentation"
+          nav_translations:
+            Beranda: Home
+            DVNM: <i>Dunia Virtual dan Nyata Menyatu</i>
+            IA AI: IA and AI
+            IA dan AI: IA and AI
+            Mode Ororon: Ororon Mode
+            Seri Gaming: Gaming Series
+            Bermain Genshin Impact: Playing Genshin Impact
+            Bermain Honkai Star Rail: Playing Honkai Star Rail
+  # - offline
+  - search:
+      lang: en

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{% if config.plugins.i18n %}{{ i18n_page_locale }}{% elif config.theme.language %}{{ config.theme.language }}{% else %}xx{% endif %}">
+  {% include '__kachina/part/head-tag.html' %}
+  <body>
+    
+    <div class="mn-lr-1280px pd-20px">
+      <main id="MainContent">{% block content %}
+        {{ page.content }}{% endblock %}
+      </main>
+    </div>
+  </body>
+</html>
