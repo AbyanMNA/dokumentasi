@@ -12,6 +12,9 @@
   <link rel="stylesheet" type="text/css" href="{{ '/__kachina/css/css.css' | url }}"/>
   <link rel="stylesheet" type="text/css" href="{{ '/__kachina/css/all.css' | url }}"/>{% for path in config.extra_css %}
   <link href="{{ path|url }}" rel="stylesheet">{% endfor %}
-  <script src="{{ '/__kachina/scr/this.js' | url }}"></script>{% block extrahead %}
+  <script src="{{ '/__kachina/scr/this.js' | url }}"></script>
+  <!--[if lt IE 9]>
+	<script src="{{ '/__kachina/src/html5shiv.js' | url }}"></script>
+  <![endif]-->{% block extrahead %}
   {% endblock %}
 </head>

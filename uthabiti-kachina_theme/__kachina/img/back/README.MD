@@ -1,0 +1,11 @@
+# README -- DISKLAIMER
+## Sumber Gambar / Picture Source:
+
+DIMOHON UNTUK INFORMASIKAN SUMBER GAMBAR, KARENA
+VALIDASI CEK SUMBER GAMBAR/FOTO/CITRA ASLI
+
+_PLEASE INFORM PICTURE SOURCE, BECAUSE VALIDATION CHECK_
+_ORIGINAL (OR PURE) PICTURE/IMAGE_
+
+- Anyaman Sukma Bergejolak <https://www.hoyolab.com/article/35529138>
+- Citlali and Ororon by gn4othi61 (Via Pinterest)
